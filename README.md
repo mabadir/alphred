@@ -14,7 +14,7 @@ Alphred is a Distraction-free Alfred 2 posting Workflow, so you can just post yo
 - Alphred needs to be authenticated the first time only, or if the token is revoked from the App.net settings.
 - To authenitcate Alphred, run the following command into Alfred 2:
 	`adnauth user:<username> pass:<password>`
-- Where `<username>` us App.net username and `<password>` is the equivalent password.
+- Where `<username>` is App.net username and `<password>` is the equivalent password.
 - App.net had introduced the *Two Factor Authentication* for increased security. If you had this enabled for your profile, then you need to use an *App-specific* password for `<password>`.
 - Alphred should send a notification to confirm that it is now authenticated and ready.
 - All set! Let's have fun.
