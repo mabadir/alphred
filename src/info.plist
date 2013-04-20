@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>co.bizmascot.alfred.alphared</string>
+	<key>connections</key>
+	<dict>
+		<key>10BFAB06-59EB-4435-8974-56744053420A</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>1148BF9E-A4CB-41D7-BF6B-08D88DE4AC30</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>1C73F80D-0134-48D9-BF84-6A4B97F98385</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>10BFAB06-59EB-4435-8974-56744053420A</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>68B4F4E1-2A2D-4AF0-B13F-AF3FB903C3D1</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>AB1FD1B5-1AF6-4862-AC9B-0BC2545EBB25</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>91532FCB-130D-48C1-AEEE-5EFAD99C634D</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>AD37415A-DC01-4D93-8972-72EA712A2B36</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>A45800D1-0FF2-4C67-8AF6-29ECD9C501CB</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>DBFB2F9C-7F77-45F4-BCDC-19B94E72B5C3</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>A8656D19-B323-4DA5-9A04-EEB03F6BEAC5</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>68B4F4E1-2A2D-4AF0-B13F-AF3FB903C3D1</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>AD37415A-DC01-4D93-8972-72EA712A2B36</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>14C1251B-CCD8-40A8-8630-29ACDF6C694B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>DBFB2F9C-7F77-45F4-BCDC-19B94E72B5C3</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>95BB9793-4C24-4D8E-BB06-ED8AC04989CB</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>E95B549F-DFB2-40DF-9569-851C4630DEBA</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>68B4F4E1-2A2D-4AF0-B13F-AF3FB903C3D1</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Mina Abadir</string>
+	<key>description</key>
+	<string>ADN connector for Alfred</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Alphred 2.0</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>32</integer>
+				<key>keyword</key>
+				<string>adn</string>
+				<key>script</key>
+				<string>php -f adn.php -- "{query}"</string>
+				<key>subtext</key>
+				<string>Post to ADN</string>
+				<key>title</key>
+				<string>Alphred</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>E95B549F-DFB2-40DF-9569-851C4630DEBA</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>36</integer>
+				<key>script</key>
+				<string>php -f post.php -- "{query}"</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>68B4F4E1-2A2D-4AF0-B13F-AF3FB903C3D1</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>output</key>
+				<integer>0</integer>
+				<key>removeextension</key>
+				<false/>
+				<key>sticky</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>Alphred Post</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>AB1FD1B5-1AF6-4862-AC9B-0BC2545EBB25</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>adnshare</string>
+				<key>script</key>
+				<string>osascript adnshare.app {query}</string>
+				<key>subtext</key>
+				<string>Press Enter to share link</string>
+				<key>title</key>
+				<string>Share Browser Link</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>A8656D19-B323-4DA5-9A04-EEB03F6BEAC5</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>adnf</string>
+				<key>script</key>
+				<string>php -f adnf.php -- "{query}"</string>
+				<key>subtext</key>
+				<string>Follow someone on ADN</string>
+				<key>title</key>
+				<string>Follow someone on ADN</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>91532FCB-130D-48C1-AEEE-5EFAD99C634D</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>output</key>
+				<integer>0</integer>
+				<key>removeextension</key>
+				<false/>
+				<key>sticky</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>Alphred Follow</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>14C1251B-CCD8-40A8-8630-29ACDF6C694B</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string>php -f follow.php -- "{query}"</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>AD37415A-DC01-4D93-8972-72EA712A2B36</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>output</key>
+				<integer>0</integer>
+				<key>removeextension</key>
+				<false/>
+				<key>sticky</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>Alphred PM</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>1148BF9E-A4CB-41D7-BF6B-08D88DE4AC30</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>100</integer>
+				<key>script</key>
+				<string>php -f pm.php -- "{query}"</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>10BFAB06-59EB-4435-8974-56744053420A</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>36</integer>
+				<key>keyword</key>
+				<string>adnpm</string>
+				<key>script</key>
+				<string>php -f adnpm.php -- "{query}"</string>
+				<key>subtext</key>
+				<string>Send Private Message to users</string>
+				<key>title</key>
+				<string>Alphred PM</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>1C73F80D-0134-48D9-BF84-6A4B97F98385</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>output</key>
+				<integer>0</integer>
+				<key>removeextension</key>
+				<false/>
+				<key>sticky</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>Alphred Authentication</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>95BB9793-4C24-4D8E-BB06-ED8AC04989CB</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string>php -f auth.php -- "{query}"</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>DBFB2F9C-7F77-45F4-BCDC-19B94E72B5C3</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>adnauth</string>
+				<key>script</key>
+				<string>php -f adnauth.php -- "{query}"</string>
+				<key>subtext</key>
+				<string>Enter credentials -- user:&lt;user&gt; pass:&lt;password&gt;</string>
+				<key>title</key>
+				<string>Authenticate Alphred</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>A45800D1-0FF2-4C67-8AF6-29ECD9C501CB</string>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>Alphred Workflow for Alfred 2.
+
+Alphred is a Distraction-free Alfred 2 posting Workflow, so you can just post your thoughts to App.net without launching any apps, and while running any other application. Simply type adn followed by your post.
+
+How to Use Alphred:
+
+- Download Alphred using the download link to the right.
+
+- Open the workflow file, to install it directly to Alfred 2 (Powerpack license is required for Workflows).
+
+- For first time only run adnauth to start the authorization process. This will take you to a web page where you will be able to Authorize Alphred.
+
+- Copy &amp; Paste the command provided in the web page into Alfred.
+Now you are ready to post; just type adn followed by your thoughts.
+
+
+
+Download it and Enjoy it.</string>
+	<key>uidata</key>
+	<dict>
+		<key>10BFAB06-59EB-4435-8974-56744053420A</key>
+		<dict>
+			<key>ypos</key>
+			<real>380</real>
+		</dict>
+		<key>1148BF9E-A4CB-41D7-BF6B-08D88DE4AC30</key>
+		<dict>
+			<key>ypos</key>
+			<real>380</real>
+		</dict>
+		<key>14C1251B-CCD8-40A8-8630-29ACDF6C694B</key>
+		<dict>
+			<key>ypos</key>
+			<real>260</real>
+		</dict>
+		<key>1C73F80D-0134-48D9-BF84-6A4B97F98385</key>
+		<dict>
+			<key>ypos</key>
+			<real>380</real>
+		</dict>
+		<key>68B4F4E1-2A2D-4AF0-B13F-AF3FB903C3D1</key>
+		<dict>
+			<key>ypos</key>
+			<real>20</real>
+		</dict>
+		<key>91532FCB-130D-48C1-AEEE-5EFAD99C634D</key>
+		<dict>
+			<key>ypos</key>
+			<real>260</real>
+		</dict>
+		<key>95BB9793-4C24-4D8E-BB06-ED8AC04989CB</key>
+		<dict>
+			<key>ypos</key>
+			<real>500</real>
+		</dict>
+		<key>A45800D1-0FF2-4C67-8AF6-29ECD9C501CB</key>
+		<dict>
+			<key>ypos</key>
+			<real>500</real>
+		</dict>
+		<key>A8656D19-B323-4DA5-9A04-EEB03F6BEAC5</key>
+		<dict>
+			<key>ypos</key>
+			<real>140</real>
+		</dict>
+		<key>AB1FD1B5-1AF6-4862-AC9B-0BC2545EBB25</key>
+		<dict>
+			<key>ypos</key>
+			<real>20</real>
+		</dict>
+		<key>AD37415A-DC01-4D93-8972-72EA712A2B36</key>
+		<dict>
+			<key>ypos</key>
+			<real>260</real>
+		</dict>
+		<key>DBFB2F9C-7F77-45F4-BCDC-19B94E72B5C3</key>
+		<dict>
+			<key>ypos</key>
+			<real>500</real>
+		</dict>
+		<key>E95B549F-DFB2-40DF-9569-851C4630DEBA</key>
+		<dict>
+			<key>ypos</key>
+			<real>20</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string>http://mina.abadir.co</string>
+</dict>
+</plist>
