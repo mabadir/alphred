@@ -47,7 +47,7 @@ Alphred is a Distraction-free Alfred 2 posting Workflow, so you can just post yo
 	`adnshare <comment>`
 - Alfred will show you two choices to share either:
 	1. Google Chrome Active tab
-	2. Safar Active tab
+	2. Safari Active tab
 - Only the running browsers will be displayed.
 - Select the required choice, this will post to App.net:
 	`<comment> [*Windows Title*](URL)`
