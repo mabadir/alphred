@@ -77,6 +77,7 @@ Alphred is a Distraction-free Alfred 2 posting Workflow, so you can just post yo
 - Added a new File Action in Alfred to Upload to App.net
 - Added a share file to post `adnfile`. File will be embedded into a post.
 - Many Bug Fixes.
+
 **NB. You will need to Reauthenticate Alphred to access the new files features**
 
 *Alphred 2.0*
