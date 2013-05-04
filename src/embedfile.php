@@ -1,29 +1,12 @@
 <?php
-
 require_once('workflows.php');
 $w = new Workflows();
 
-
-$users = array();
-$u = explode(" ",$argv[1],2);
-while(true):
-	if(substr($u[0],0,1)=='@'):
-		$users[]=$u[0];
-		$u = explode(" ",$u[1],2);
-	else:
-		$text = $u[0].' '.$u[1];
-		break;
-	endif;
-endwhile;
-$token =  $w->get( 'token', 'settings.plist' );
-
-if($token != ''){
-	$headers=array(
-		'Content-Type: application/json',
-		'Authorization: Bearer '.$token,
-		);
-	$url='https://alpha-api.app.net/stream/0/channels/pm/messages';
-	$post['text'] = iconv(mb_detect_encoding($text, mb_detect_order(), true), "UTF-8", $text);
+$u = explode(" ",$argv[1],3);
+if(mb_substr($u[0],0,5)=='file:' && mb_substr($u[1],0,6)=='token:'){
+    $file = mb_substr($u[0], 5);
+    $token = mb_substr($u[1], 6);
+    $text = $post['text'] = iconv(mb_detect_encoding($u[2], mb_detect_order(), true), "UTF-8", $u[2]);
     preg_match_all('/\[([^]]*)\] *\(([^)]*)\)/i', $text,$matches,PREG_OFFSET_CAPTURE);
     if(count($matches)){
         $entities = array();
@@ -37,17 +20,33 @@ if($token != ''){
         $post['entities']=$entities;
         $post['text']=$text;
     }
-
-    if(strlen($text)<=256){
-    	$query=array('destinations'=>$users,'text'=>$text,'entities'=>$entities);
-    	connect($url,$headers,$query);
-    }else{
-        echo 'Exceeded 256 Characters';
-    }
-
+    $post['annotations']=array(
+        0=>array(
+            'type'=>'net.app.core.oembed',
+            'value'=>array(
+                '+net.app.core.file'=>array(
+                    "file_id"=> $file,
+                    "file_token"=>$token,
+                    "format"=> "oembed"
+                    )
+                )
+            ),
+        );
+    if(strlen($text)<=256):
+        $token =  $w->get( 'token', 'settings.plist' );
+    $url='https://alpha-api.app.net/stream/0/posts';
+    $headers=array(
+        'Content-Type: application/json',
+        'Authorization: Bearer '.$token,
+        );
+    connect($url,$headers,$post);
+    else:
+        echo "Exceeded 256 Characters";
+    endif;
 }else{
-	echo 'Reauthorize Alphred using adnauth';
+    echo 'Incorrect request';
 }
+
 
 
 function connect($url,$headers,$query){
@@ -59,10 +58,10 @@ function connect($url,$headers,$query){
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
         $output=json_decode(curl_exec($ch));
         curl_close ($ch);
-
         if($output->meta->code==200){
-            echo 'PM sent';
+            echo 'Posted';
         }else{
-        	echo 'There is was an error';
+            $error = $output->error;
+            echo 'Error Posting';           
         }
     }

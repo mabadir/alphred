@@ -28,6 +28,39 @@
 				<string></string>
 			</dict>
 		</array>
+		<key>2FB762A4-8F5B-47BF-BE99-10419E81D9F4</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>4969C6B0-0AC0-4534-A6CF-D5DA344EC591</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>4969C6B0-0AC0-4534-A6CF-D5DA344EC591</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>A4245840-122A-4C5E-8246-4312EEBE9809</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>51FF0E44-3FEE-4779-8D93-EF47073B0C0B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>AEBAC11D-F2C6-49FD-99FC-DED0BCD51936</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
 		<key>68B4F4E1-2A2D-4AF0-B13F-AF3FB903C3D1</key>
 		<array>
 			<dict>
@@ -83,6 +116,17 @@
 				<string></string>
 			</dict>
 		</array>
+		<key>AEBAC11D-F2C6-49FD-99FC-DED0BCD51936</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>58F5C412-FC64-4EE0-A384-31926093B7F6</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
 		<key>DBFB2F9C-7F77-45F4-BCDC-19B94E72B5C3</key>
 		<array>
 			<dict>
@@ -109,11 +153,11 @@
 	<key>createdby</key>
 	<string>Mina Abadir</string>
 	<key>description</key>
-	<string>ADN connector for Alfred</string>
+	<string>Alphred for App.net</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>Alphred 2.0</string>
+	<string>Alphred 2.5</string>
 	<key>objects</key>
 	<array>
 		<dict>
@@ -185,11 +229,11 @@
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>escaping</key>
-				<integer>0</integer>
+				<integer>4</integer>
 				<key>keyword</key>
 				<string>adnshare</string>
 				<key>script</key>
-				<string>osascript adnshare.app {query}</string>
+				<string>osascript adnshare.app "{query}"</string>
 				<key>subtext</key>
 				<string>Press Enter to share link</string>
 				<key>title</key>
@@ -294,7 +338,7 @@
 			<key>config</key>
 			<dict>
 				<key>escaping</key>
-				<integer>100</integer>
+				<integer>36</integer>
 				<key>script</key>
 				<string>php -f pm.php -- "{query}"</string>
 				<key>type</key>
@@ -333,6 +377,21 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>escaping</key>
+				<integer>36</integer>
+				<key>script</key>
+				<string>php -f auth.php -- "{query}"</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>DBFB2F9C-7F77-45F4-BCDC-19B94E72B5C3</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>lastpathcomponent</key>
 				<false/>
 				<key>onlyshowifquerypopulated</key>
@@ -356,25 +415,10 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>script</key>
-				<string>php -f auth.php -- "{query}"</string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>DBFB2F9C-7F77-45F4-BCDC-19B94E72B5C3</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argumenttype</key>
 				<integer>0</integer>
 				<key>escaping</key>
-				<integer>0</integer>
+				<integer>36</integer>
 				<key>keyword</key>
 				<string>adnauth</string>
 				<key>script</key>
@@ -392,6 +436,124 @@
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
 			<string>A45800D1-0FF2-4C67-8AF6-29ECD9C501CB</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>acceptsmulti</key>
+				<false/>
+				<key>filetypes</key>
+				<array/>
+				<key>name</key>
+				<string>Upload file to App.net</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.action</string>
+			<key>uid</key>
+			<string>51FF0E44-3FEE-4779-8D93-EF47073B0C0B</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>4</integer>
+				<key>script</key>
+				<string>php -f file.php -- "{query}"</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>AEBAC11D-F2C6-49FD-99FC-DED0BCD51936</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>output</key>
+				<integer>0</integer>
+				<key>removeextension</key>
+				<false/>
+				<key>sticky</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>Upload file to App.net</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>58F5C412-FC64-4EE0-A384-31926093B7F6</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>36</integer>
+				<key>script</key>
+				<string>php -f embedfile.php -- "{query}"</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>4969C6B0-0AC0-4534-A6CF-D5DA344EC591</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>output</key>
+				<integer>0</integer>
+				<key>removeextension</key>
+				<false/>
+				<key>sticky</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>Share files</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>A4245840-122A-4C5E-8246-4312EEBE9809</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>36</integer>
+				<key>keyword</key>
+				<string>adnfile</string>
+				<key>runningsubtext</key>
+				<string>Retrieve file list</string>
+				<key>script</key>
+				<string>php -f adnfile.php -- "{query}"</string>
+				<key>subtext</key>
+				<string>Get lastest ADN files</string>
+				<key>title</key>
+				<string>ADN files</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>2FB762A4-8F5B-47BF-BE99-10419E81D9F4</string>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -435,6 +597,26 @@ Download it and Enjoy it.</string>
 			<key>ypos</key>
 			<real>380</real>
 		</dict>
+		<key>2FB762A4-8F5B-47BF-BE99-10419E81D9F4</key>
+		<dict>
+			<key>ypos</key>
+			<real>740</real>
+		</dict>
+		<key>4969C6B0-0AC0-4534-A6CF-D5DA344EC591</key>
+		<dict>
+			<key>ypos</key>
+			<real>740</real>
+		</dict>
+		<key>51FF0E44-3FEE-4779-8D93-EF47073B0C0B</key>
+		<dict>
+			<key>ypos</key>
+			<real>620</real>
+		</dict>
+		<key>58F5C412-FC64-4EE0-A384-31926093B7F6</key>
+		<dict>
+			<key>ypos</key>
+			<real>620</real>
+		</dict>
 		<key>68B4F4E1-2A2D-4AF0-B13F-AF3FB903C3D1</key>
 		<dict>
 			<key>ypos</key>
@@ -449,6 +631,11 @@ Download it and Enjoy it.</string>
 		<dict>
 			<key>ypos</key>
 			<real>500</real>
+		</dict>
+		<key>A4245840-122A-4C5E-8246-4312EEBE9809</key>
+		<dict>
+			<key>ypos</key>
+			<real>740</real>
 		</dict>
 		<key>A45800D1-0FF2-4C67-8AF6-29ECD9C501CB</key>
 		<dict>
@@ -469,6 +656,11 @@ Download it and Enjoy it.</string>
 		<dict>
 			<key>ypos</key>
 			<real>260</real>
+		</dict>
+		<key>AEBAC11D-F2C6-49FD-99FC-DED0BCD51936</key>
+		<dict>
+			<key>ypos</key>
+			<real>620</real>
 		</dict>
 		<key>DBFB2F9C-7F77-45F4-BCDC-19B94E72B5C3</key>
 		<dict>

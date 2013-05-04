@@ -1,19 +1,16 @@
 <?php
 require_once('workflows.php');
 $w = new Workflows();
-$q=$argv;
 
-$q= explode(" ",$argv[1],2);
-$text = $post['text']=$argv[1];
+$text = $post['text'] = iconv(mb_detect_encoding($argv[1], mb_detect_order(), true), "UTF-8", $argv[1]);
 preg_match_all('/\[([^]]*)\] *\(([^)]*)\)/i', $text,$matches,PREG_OFFSET_CAPTURE);
 if(count($matches)){
     $entities = array();
+    $entities['links']=array();
     foreach ($matches[0] as $k=>$match) {
+        $entities['links'][$k]['pos']=mb_strpos($text,$matches[0][$k][0],0,'UTF-8');
         $text = str_replace($match[0], $matches[1][$k][0], $text);
-        $entities=array();
-        $entities['links']=array();
-        $entities['links'][$k]['pos']=$matches[1][$k][1] - 1;
-        $entities['links'][$k]['len']=strlen(utf8_decode($matches[1][$k][0]));
+        $entities['links'][$k]['len']=mb_strlen($matches[1][$k][0],'UTF-8');
         $entities['links'][$k]['url']=$matches[2][$k][0];
     }
     $post['entities']=$entities;

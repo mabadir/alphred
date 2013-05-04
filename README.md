@@ -52,6 +52,19 @@ Alphred is a Distraction-free Alfred 2 posting Workflow, so you can just post yo
 - Select the required choice, this will post to App.net:
 	`<comment> [*Windows Title*](URL)`
 
+#### Uploading a File to App.net
+- Simply launch Alfred.
+- Search for any file normaly from Alfred.
+- Open file actions.
+- Select Upload to App.net.
+- This should create a new *private* file to your App.net files.
+
+#### Share file to a post
+- This will embed any file already uploaded to your App.net files storage to a new post.
+- Simply launch Alfred, then type:
+	`adnfile <post>`
+- In case of Images, an MD link will be added to the end of post, as a failsafe to clients that do not support embedded files.
+
 **General Options**
 - You can run `adnauth` anytime, to get a new token.
 - You can always use Markdown style links, in order to add entities links to you post.
@@ -59,6 +72,12 @@ Alphred is a Distraction-free Alfred 2 posting Workflow, so you can just post yo
 ---
 
 # Changelog
+
+*Alphred 2.5*
+- Added a new File Action in Alfred to Upload to App.net
+- Added a share file to post `adnfile`. File will be embedded into a post.
+- Many Bug Fixes.
+**NB. You will need to Reauthenticate Alphred to access the new files features**
 
 *Alphred 2.0*
 - Added Safari support for Sharing Browser page feature `adnshare`.
