@@ -15,7 +15,7 @@ endif;
 
 if(isset($username) && isset($password) ):
 	$url = 'https://account.app.net/oauth/access_token';
-	$query='client_id=2CzUFaajaryPuVsUV7GQeNQ9HzkcZRV7&password_grant_secret=e4t3JLjUwMptYvusGvzL4Bp95L3PbGbp&grant_type=password&username='.$username.'&password='.urlencode($password).'&scope='.urlencode('stream write_post follow messages files');
+	$query='client_id=2CzUFaajaryPuVsUV7GQeNQ9HzkcZRV7&password_grant_secret=<secret>&grant_type=password&username='.$username.'&password='.urlencode($password).'&scope='.urlencode('stream write_post follow messages files');
 	connect($url,$query,$w);
 else:
 	echo 'Wrong data, please enter data in the format user:<user> pass:<password>';

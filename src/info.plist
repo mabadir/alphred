@@ -10,6 +10,14 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
+				<string>E564188E-72A6-4E9E-A503-48B35E2DF718</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
 				<string>1148BF9E-A4CB-41D7-BF6B-08D88DE4AC30</string>
 				<key>modifiers</key>
 				<integer>0</integer>
@@ -66,6 +74,17 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>AB1FD1B5-1AF6-4862-AC9B-0BC2545EBB25</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>8D5F3C81-2768-4642-A9BF-F7EB2DFE5479</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>68B4F4E1-2A2D-4AF0-B13F-AF3FB903C3D1</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -157,34 +176,9 @@
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>Alphred 2.5</string>
+	<string>Alphred 2.6</string>
 	<key>objects</key>
 	<array>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>escaping</key>
-				<integer>32</integer>
-				<key>keyword</key>
-				<string>adn</string>
-				<key>script</key>
-				<string>php -f adn.php -- "{query}"</string>
-				<key>subtext</key>
-				<string>Post to ADN</string>
-				<key>title</key>
-				<string>Alphred</string>
-				<key>type</key>
-				<integer>0</integer>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>E95B549F-DFB2-40DF-9569-851C4630DEBA</string>
-		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -227,6 +221,44 @@
 			<key>config</key>
 			<dict>
 				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>32</integer>
+				<key>keyword</key>
+				<string>adn</string>
+				<key>script</key>
+				<string>php -f adn.php -- "{query}"</string>
+				<key>subtext</key>
+				<string>Post to ADN</string>
+				<key>title</key>
+				<string>Alphred</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>E95B549F-DFB2-40DF-9569-851C4630DEBA</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>E564188E-72A6-4E9E-A503-48B35E2DF718</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>escaping</key>
 				<integer>4</integer>
@@ -247,31 +279,6 @@
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
 			<string>A8656D19-B323-4DA5-9A04-EEB03F6BEAC5</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>keyword</key>
-				<string>adnf</string>
-				<key>script</key>
-				<string>php -f adnf.php -- "{query}"</string>
-				<key>subtext</key>
-				<string>Follow someone on ADN</string>
-				<key>title</key>
-				<string>Follow someone on ADN</string>
-				<key>type</key>
-				<integer>0</integer>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>91532FCB-130D-48C1-AEEE-5EFAD99C634D</string>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -310,6 +317,31 @@
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
 			<string>AD37415A-DC01-4D93-8972-72EA712A2B36</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>adnf</string>
+				<key>script</key>
+				<string>php -f adnf.php -- "{query}"</string>
+				<key>subtext</key>
+				<string>Follow someone on ADN</string>
+				<key>title</key>
+				<string>Follow someone on ADN</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>91532FCB-130D-48C1-AEEE-5EFAD99C634D</string>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -377,6 +409,31 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>36</integer>
+				<key>keyword</key>
+				<string>adnauth</string>
+				<key>script</key>
+				<string>php -f adnauth.php -- "{query}"</string>
+				<key>subtext</key>
+				<string>Enter credentials -- user:&lt;user&gt; pass:&lt;password&gt;</string>
+				<key>title</key>
+				<string>Authenticate Alphred</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>A45800D1-0FF2-4C67-8AF6-29ECD9C501CB</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>escaping</key>
 				<integer>36</integer>
 				<key>script</key>
@@ -415,31 +472,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>escaping</key>
-				<integer>36</integer>
-				<key>keyword</key>
-				<string>adnauth</string>
-				<key>script</key>
-				<string>php -f adnauth.php -- "{query}"</string>
-				<key>subtext</key>
-				<string>Enter credentials -- user:&lt;user&gt; pass:&lt;password&gt;</string>
-				<key>title</key>
-				<string>Authenticate Alphred</string>
-				<key>type</key>
-				<integer>0</integer>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>A45800D1-0FF2-4C67-8AF6-29ECD9C501CB</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>acceptsmulti</key>
 				<false/>
 				<key>filetypes</key>
@@ -451,21 +483,6 @@
 			<string>alfred.workflow.trigger.action</string>
 			<key>uid</key>
 			<string>51FF0E44-3FEE-4779-8D93-EF47073B0C0B</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>escaping</key>
-				<integer>4</integer>
-				<key>script</key>
-				<string>php -f file.php -- "{query}"</string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>AEBAC11D-F2C6-49FD-99FC-DED0BCD51936</string>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -489,6 +506,48 @@
 			<string>alfred.workflow.output.notification</string>
 			<key>uid</key>
 			<string>58F5C412-FC64-4EE0-A384-31926093B7F6</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>4</integer>
+				<key>script</key>
+				<string>php -f file.php -- "{query}"</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>AEBAC11D-F2C6-49FD-99FC-DED0BCD51936</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>36</integer>
+				<key>keyword</key>
+				<string>adnfile</string>
+				<key>runningsubtext</key>
+				<string>Retrieve file list</string>
+				<key>script</key>
+				<string>php -f adnfile.php -- "{query}"</string>
+				<key>subtext</key>
+				<string>Get lastest ADN files</string>
+				<key>title</key>
+				<string>ADN files</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>2FB762A4-8F5B-47BF-BE99-10419E81D9F4</string>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -534,17 +593,15 @@
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>escaping</key>
-				<integer>36</integer>
+				<integer>4</integer>
 				<key>keyword</key>
-				<string>adnfile</string>
-				<key>runningsubtext</key>
-				<string>Retrieve file list</string>
+				<string>adnplay</string>
 				<key>script</key>
-				<string>php -f adnfile.php -- "{query}"</string>
+				<string>osascript adnplay.app "{query}"</string>
 				<key>subtext</key>
-				<string>Get lastest ADN files</string>
+				<string>Press Enter to share #NowPlaying information</string>
 				<key>title</key>
-				<string>ADN files</string>
+				<string>Post iTunes Track</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -553,7 +610,7 @@
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>2FB762A4-8F5B-47BF-BE99-10419E81D9F4</string>
+			<string>8D5F3C81-2768-4642-A9BF-F7EB2DFE5479</string>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -622,6 +679,11 @@ Download it and Enjoy it.</string>
 			<key>ypos</key>
 			<real>20</real>
 		</dict>
+		<key>8D5F3C81-2768-4642-A9BF-F7EB2DFE5479</key>
+		<dict>
+			<key>ypos</key>
+			<real>870</real>
+		</dict>
 		<key>91532FCB-130D-48C1-AEEE-5EFAD99C634D</key>
 		<dict>
 			<key>ypos</key>
@@ -666,6 +728,11 @@ Download it and Enjoy it.</string>
 		<dict>
 			<key>ypos</key>
 			<real>500</real>
+		</dict>
+		<key>E564188E-72A6-4E9E-A503-48B35E2DF718</key>
+		<dict>
+			<key>ypos</key>
+			<real>140</real>
 		</dict>
 		<key>E95B549F-DFB2-40DF-9569-851C4630DEBA</key>
 		<dict>
