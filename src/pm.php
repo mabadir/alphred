@@ -85,7 +85,6 @@ function connect($url,$headers,$query){
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
         $output=json_decode(curl_exec($ch));
         curl_close ($ch);
-        print_r($output);
         if($output->meta->code==200){
             echo 'PM sent';
         }else{
