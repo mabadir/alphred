@@ -3,7 +3,7 @@ require_once('workflows.php');
 $w = new Workflows();
 $token =  $w->get( 'token', 'settings.plist' );
 
-$u = explode(" ",$argv[1],2);
+$u = explode(" ",$argv[1],1);
 $text = $post['text'] = iconv(mb_detect_encoding($u[2], mb_detect_order(), true), "UTF-8", $u[1]);
 $replyid = $post['reply_to'] = $u[0];
 preg_match_all('/\[([^]]*)\] *\(([^)]*)\)/i', $text,$matches,PREG_OFFSET_CAPTURE);
