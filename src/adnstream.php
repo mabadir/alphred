@@ -13,11 +13,12 @@ $posts = $output->data;
 foreach ($posts as $post){
 	$arg = $argv[1];
 	$source = $post->source;
+	$user = $post->user;
 	$icon='icon.png';
 	$date = strtotime($post->created_at);
 	$fixed = date('Y-m-d - g:ia', $date);
 	$random = rand();
-	$w->result('unifiedstream-'.$post->id. '-' .$random, $post->id.' '.$arg, $post->text, "Created " .$fixed. " with " .$source->name, $icon, 'yes', 'Alfredapp' );
+	$w->result('unifiedstream-'.$post->id. '-' .$random, $post->id.' '.$arg, $post->text, "Created " .$fixed. " by " .$user->username. " with " .$source->name, $icon, 'yes', 'Alfredapp' );
 }
 	echo $w->toxml();
 
