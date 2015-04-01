@@ -10,14 +10,6 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>E564188E-72A6-4E9E-A503-48B35E2DF718</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
 				<string>1148BF9E-A4CB-41D7-BF6B-08D88DE4AC30</string>
 				<key>modifiers</key>
 				<integer>0</integer>
@@ -47,6 +39,17 @@
 				<string></string>
 			</dict>
 		</array>
+		<key>3D4DBE22-C125-42B4-A8D4-54144E3BF3DD</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>F05B12BA-5C7E-41D7-95F9-A9BE8680ED37</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
 		<key>4969C6B0-0AC0-4534-A6CF-D5DA344EC591</key>
 		<array>
 			<dict>
@@ -63,6 +66,17 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>AEBAC11D-F2C6-49FD-99FC-DED0BCD51936</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>678A4995-04B3-4924-8A4B-1A9D3CA8A457</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>3D4DBE22-C125-42B4-A8D4-54144E3BF3DD</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -146,6 +160,17 @@
 				<string></string>
 			</dict>
 		</array>
+		<key>BA7AF153-732B-4BB5-9B4C-E58F3D204694</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>3D4DBE22-C125-42B4-A8D4-54144E3BF3DD</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
 		<key>DBFB2F9C-7F77-45F4-BCDC-19B94E72B5C3</key>
 		<array>
 			<dict>
@@ -176,110 +201,9 @@
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>Alphred 2.6</string>
+	<string>Alphred 2.7.alpha</string>
 	<key>objects</key>
 	<array>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>escaping</key>
-				<integer>36</integer>
-				<key>script</key>
-				<string>php -f post.php -- "{query}"</string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>68B4F4E1-2A2D-4AF0-B13F-AF3FB903C3D1</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<true/>
-				<key>output</key>
-				<integer>0</integer>
-				<key>removeextension</key>
-				<false/>
-				<key>sticky</key>
-				<false/>
-				<key>text</key>
-				<string>{query}</string>
-				<key>title</key>
-				<string>Alphred Post</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>AB1FD1B5-1AF6-4862-AC9B-0BC2545EBB25</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>escaping</key>
-				<integer>32</integer>
-				<key>keyword</key>
-				<string>adn</string>
-				<key>script</key>
-				<string>php -f adn.php -- "{query}"</string>
-				<key>subtext</key>
-				<string>Post to ADN</string>
-				<key>title</key>
-				<string>Alphred</string>
-				<key>type</key>
-				<integer>0</integer>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>E95B549F-DFB2-40DF-9569-851C4630DEBA</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>autopaste</key>
-				<false/>
-				<key>clipboardtext</key>
-				<string>{query}</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>E564188E-72A6-4E9E-A503-48B35E2DF718</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>escaping</key>
-				<integer>4</integer>
-				<key>keyword</key>
-				<string>adnshare</string>
-				<key>script</key>
-				<string>osascript adnshare.app "{query}"</string>
-				<key>subtext</key>
-				<string>Press Enter to share link</string>
-				<key>title</key>
-				<string>Share Browser Link</string>
-				<key>type</key>
-				<integer>0</integer>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>A8656D19-B323-4DA5-9A04-EEB03F6BEAC5</string>
-		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -472,21 +396,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>acceptsmulti</key>
-				<false/>
-				<key>filetypes</key>
-				<array/>
-				<key>name</key>
-				<string>Upload file to App.net</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.action</string>
-			<key>uid</key>
-			<string>51FF0E44-3FEE-4779-8D93-EF47073B0C0B</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>lastpathcomponent</key>
 				<false/>
 				<key>onlyshowifquerypopulated</key>
@@ -506,6 +415,21 @@
 			<string>alfred.workflow.output.notification</string>
 			<key>uid</key>
 			<string>58F5C412-FC64-4EE0-A384-31926093B7F6</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>acceptsmulti</key>
+				<false/>
+				<key>filetypes</key>
+				<array/>
+				<key>name</key>
+				<string>Upload file to App.net</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.action</string>
+			<key>uid</key>
+			<string>51FF0E44-3FEE-4779-8D93-EF47073B0C0B</string>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -590,6 +514,94 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>escaping</key>
+				<integer>36</integer>
+				<key>script</key>
+				<string>php -f post.php -- "{query}"</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>68B4F4E1-2A2D-4AF0-B13F-AF3FB903C3D1</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>output</key>
+				<integer>0</integer>
+				<key>removeextension</key>
+				<false/>
+				<key>sticky</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>Alphred Post</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>AB1FD1B5-1AF6-4862-AC9B-0BC2545EBB25</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>32</integer>
+				<key>keyword</key>
+				<string>adn</string>
+				<key>script</key>
+				<string>php -f adn.php -- "{query}"</string>
+				<key>subtext</key>
+				<string>Post to ADN</string>
+				<key>title</key>
+				<string>Alphred</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>E95B549F-DFB2-40DF-9569-851C4630DEBA</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>4</integer>
+				<key>keyword</key>
+				<string>adnshare</string>
+				<key>script</key>
+				<string>osascript adnshare.app "{query}"</string>
+				<key>subtext</key>
+				<string>Press Enter to share link</string>
+				<key>title</key>
+				<string>Share Browser Link</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>A8656D19-B323-4DA5-9A04-EEB03F6BEAC5</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>escaping</key>
@@ -611,6 +623,98 @@
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
 			<string>8D5F3C81-2768-4642-A9BF-F7EB2DFE5479</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>36</integer>
+				<key>script</key>
+				<string>php -f post_reply.php -- "{query}"</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>3D4DBE22-C125-42B4-A8D4-54144E3BF3DD</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>output</key>
+				<integer>0</integer>
+				<key>removeextension</key>
+				<false/>
+				<key>sticky</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>Reply Posted</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>F05B12BA-5C7E-41D7-95F9-A9BE8680ED37</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>36</integer>
+				<key>keyword</key>
+				<string>adnstream</string>
+				<key>runningsubtext</key>
+				<string>Retrieving posts…</string>
+				<key>script</key>
+				<string>php -f adnstream.php -- "{query}"</string>
+				<key>subtext</key>
+				<string>Show the last 20 posts in your stream</string>
+				<key>title</key>
+				<string>ADN Unified Stream</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>678A4995-04B3-4924-8A4B-1A9D3CA8A457</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>36</integer>
+				<key>keyword</key>
+				<string>adnmention</string>
+				<key>runningsubtext</key>
+				<string>Fetching Mentions…</string>
+				<key>script</key>
+				<string>php -f adnmention.php -- "{query}"</string>
+				<key>subtext</key>
+				<string>Your 20 latest ADN Mentions</string>
+				<key>title</key>
+				<string>ADN Mentions</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>BA7AF153-732B-4BB5-9B4C-E58F3D204694</string>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -637,107 +741,122 @@ Download it and Enjoy it.</string>
 		<key>10BFAB06-59EB-4435-8974-56744053420A</key>
 		<dict>
 			<key>ypos</key>
-			<real>380</real>
+			<real>480</real>
 		</dict>
 		<key>1148BF9E-A4CB-41D7-BF6B-08D88DE4AC30</key>
 		<dict>
 			<key>ypos</key>
-			<real>380</real>
+			<real>480</real>
 		</dict>
 		<key>14C1251B-CCD8-40A8-8630-29ACDF6C694B</key>
 		<dict>
 			<key>ypos</key>
-			<real>260</real>
+			<real>370</real>
 		</dict>
 		<key>1C73F80D-0134-48D9-BF84-6A4B97F98385</key>
 		<dict>
 			<key>ypos</key>
-			<real>380</real>
+			<real>480</real>
 		</dict>
 		<key>2FB762A4-8F5B-47BF-BE99-10419E81D9F4</key>
 		<dict>
 			<key>ypos</key>
-			<real>740</real>
+			<real>810</real>
+		</dict>
+		<key>3D4DBE22-C125-42B4-A8D4-54144E3BF3DD</key>
+		<dict>
+			<key>ypos</key>
+			<real>1260</real>
 		</dict>
 		<key>4969C6B0-0AC0-4534-A6CF-D5DA344EC591</key>
 		<dict>
 			<key>ypos</key>
-			<real>740</real>
+			<real>810</real>
 		</dict>
 		<key>51FF0E44-3FEE-4779-8D93-EF47073B0C0B</key>
 		<dict>
 			<key>ypos</key>
-			<real>620</real>
+			<real>700</real>
 		</dict>
 		<key>58F5C412-FC64-4EE0-A384-31926093B7F6</key>
 		<dict>
 			<key>ypos</key>
-			<real>620</real>
+			<real>700</real>
+		</dict>
+		<key>678A4995-04B3-4924-8A4B-1A9D3CA8A457</key>
+		<dict>
+			<key>ypos</key>
+			<real>1260</real>
 		</dict>
 		<key>68B4F4E1-2A2D-4AF0-B13F-AF3FB903C3D1</key>
 		<dict>
 			<key>ypos</key>
-			<real>20</real>
+			<real>920</real>
 		</dict>
 		<key>8D5F3C81-2768-4642-A9BF-F7EB2DFE5479</key>
 		<dict>
 			<key>ypos</key>
-			<real>870</real>
+			<real>1140</real>
 		</dict>
 		<key>91532FCB-130D-48C1-AEEE-5EFAD99C634D</key>
 		<dict>
 			<key>ypos</key>
-			<real>260</real>
+			<real>370</real>
 		</dict>
 		<key>95BB9793-4C24-4D8E-BB06-ED8AC04989CB</key>
 		<dict>
 			<key>ypos</key>
-			<real>500</real>
+			<real>590</real>
 		</dict>
 		<key>A4245840-122A-4C5E-8246-4312EEBE9809</key>
 		<dict>
 			<key>ypos</key>
-			<real>740</real>
+			<real>810</real>
 		</dict>
 		<key>A45800D1-0FF2-4C67-8AF6-29ECD9C501CB</key>
 		<dict>
 			<key>ypos</key>
-			<real>500</real>
+			<real>590</real>
 		</dict>
 		<key>A8656D19-B323-4DA5-9A04-EEB03F6BEAC5</key>
 		<dict>
 			<key>ypos</key>
-			<real>140</real>
+			<real>1030</real>
 		</dict>
 		<key>AB1FD1B5-1AF6-4862-AC9B-0BC2545EBB25</key>
 		<dict>
 			<key>ypos</key>
-			<real>20</real>
+			<real>920</real>
 		</dict>
 		<key>AD37415A-DC01-4D93-8972-72EA712A2B36</key>
 		<dict>
 			<key>ypos</key>
-			<real>260</real>
+			<real>370</real>
 		</dict>
 		<key>AEBAC11D-F2C6-49FD-99FC-DED0BCD51936</key>
 		<dict>
 			<key>ypos</key>
-			<real>620</real>
+			<real>700</real>
+		</dict>
+		<key>BA7AF153-732B-4BB5-9B4C-E58F3D204694</key>
+		<dict>
+			<key>ypos</key>
+			<real>1380</real>
 		</dict>
 		<key>DBFB2F9C-7F77-45F4-BCDC-19B94E72B5C3</key>
 		<dict>
 			<key>ypos</key>
-			<real>500</real>
-		</dict>
-		<key>E564188E-72A6-4E9E-A503-48B35E2DF718</key>
-		<dict>
-			<key>ypos</key>
-			<real>140</real>
+			<real>590</real>
 		</dict>
 		<key>E95B549F-DFB2-40DF-9569-851C4630DEBA</key>
 		<dict>
 			<key>ypos</key>
-			<real>20</real>
+			<real>920</real>
+		</dict>
+		<key>F05B12BA-5C7E-41D7-95F9-A9BE8680ED37</key>
+		<dict>
+			<key>ypos</key>
+			<real>1260</real>
 		</dict>
 	</dict>
 	<key>webaddress</key>
